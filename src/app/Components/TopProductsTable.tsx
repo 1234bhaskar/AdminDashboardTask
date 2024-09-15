@@ -64,9 +64,9 @@ return(
                 <TableCell>{p.name}</TableCell>
                 <TableCell>
                 {/* Progress bar */}
-                <Progress value={p.value}  className={`bg-${p.bgColor}`}  />
+                <Progress value={p.value}    />
                 </TableCell>
-                <TableCell className=""><div className={` flex justify-center  border-2  border-${p.color} bg-${p.bgColor}  text-${p.color}`} >{p.value}%</div></TableCell>
+                <TableCell className=""><div className={` flex justify-center  border-2 border-${p.color} bg-${p.bgColor}  text-${p.color}`} >{p.value}%</div></TableCell>
                 </TableRow>
             )
         })
