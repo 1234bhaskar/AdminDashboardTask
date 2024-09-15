@@ -8,7 +8,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { Progress } from "@/components/ui/progress"
+//import { Progress } from "@/components/ui/progress"
+import { Progress } from "@material-tailwind/react"
 
 
 const ProductArray=[
@@ -17,7 +18,7 @@ const ProductArray=[
         name:"Home Decore Range",
         value:45,
         color:"blue-500",
-        bgColor:"cyan-00",
+        bgColor:"cyan-300",
         tColor:"blue"
     },
     {
@@ -33,12 +34,14 @@ const ProductArray=[
         name:"Bathroom Essentials",
         value:18,
         color:"purple-600",
-        bgColor:`purple-300`,
+        bgColor:"purple-300",
         tColor:"purple"
 
 
     }
 ]
+
+
 export const TopProductsTable=()=>{
 return(
   <div className="w-[40%]  rounded-lg bg-white p-3 ">
@@ -64,7 +67,8 @@ return(
                 <TableCell>{p.name}</TableCell>
                 <TableCell>
                 {/* Progress bar */}
-                <Progress value={p.value}    />
+                {/* <Progress value={p.value}    /> */}
+                <Progress value={p.value} color={`${p.tColor}` } className={`bg-${p.bgColor}`} />
                 </TableCell>
                 <TableCell className=""><div className={` flex justify-center  border-2 border-${p.color} bg-${p.bgColor}  text-${p.color}`} >{p.value}%</div></TableCell>
                 </TableRow>
